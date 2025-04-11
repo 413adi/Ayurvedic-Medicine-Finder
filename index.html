@@ -95,6 +95,13 @@
             margin: 5px 0;
         }
         
+        .medicine-detail:nth-child(4) {
+            background-color: #f1f8e9;
+            border-left: 3px solid #8bc34a;
+            padding: 5px;
+            margin: 8px 0;
+        }
+        
         .detail-label {
             font-weight: bold;
             color: #558b2f;
@@ -174,6 +181,7 @@
         <h1>Ayurvedic Medicine Finder</h1>
         
         <h2>Select Your Symptoms</h2>
+        <p style="margin-bottom: 15px;">We've added "When to Take" information to help you use each medicine most effectively.</p>
         <div class="symptom-selector" id="symptomSelector">
             <!-- Symptom buttons will be added here via JavaScript -->
         </div>
@@ -202,6 +210,7 @@
                 primaryUses: "Respiratory conditions, cough, bronchitis, and asthma",
                 alsoBeneficialFor: "Joint pain, lower back pain, and general weakness",
                 bestTakenWith: "Warm water in the morning",
+                timing: "Best taken 30 minutes before breakfast on an empty stomach",
                 notable: "Contains ten medicinal roots (hence the name 'dasa-mula')",
                 symptoms: ["cough", "respiratory conditions", "bronchitis", "asthma", "joint pain", "lower back pain", "weakness"]
             },
@@ -210,6 +219,7 @@
                 primaryUses: "General immunity booster and rejuvenator",
                 alsoBeneficialFor: "Physical and mental fatigue, weakness",
                 bestTakenWith: "Milk or warm water",
+                timing: "Take early morning on an empty stomach, or as directed by practitioner",
                 notable: "Particularly good for elderly and children during recovery periods",
                 symptoms: ["low immunity", "fatigue", "weakness", "recovery"]
             },
@@ -218,6 +228,7 @@
                 primaryUses: "Respiratory ailments, particularly chronic cough",
                 alsoBeneficialFor: "Throat infections, bronchitis",
                 bestTakenWith: "Honey",
+                timing: "Take twice daily after meals, or as needed for cough relief",
                 notable: "Contains Talispatra which is known for its effectiveness against respiratory issues",
                 symptoms: ["respiratory ailments", "chronic cough", "cough", "throat infections", "bronchitis"]
             },
@@ -226,6 +237,7 @@
                 primaryUses: "Digestive health, gentle detoxification",
                 alsoBeneficialFor: "Eye health, constipation, metabolism",
                 bestTakenWith: "Warm water at bedtime",
+                timing: "Best taken at night before sleep for detoxification, 1-2 hours after dinner",
                 notable: "Contains three fruits (Amla, Bibhitaki, and Haritaki)",
                 symptoms: ["digestive issues", "constipation", "eye problems", "metabolism issues", "detoxification"]
             },
@@ -234,6 +246,7 @@
                 primaryUses: "Digestive aid, particularly for acidity",
                 alsoBeneficialFor: "Nausea, loss of appetite",
                 bestTakenWith: "Warm water after meals",
+                timing: "Take immediately after meals or when experiencing acidity",
                 notable: "Contains lime/lemon as a primary ingredient",
                 symptoms: ["digestive issues", "acidity", "nausea", "loss of appetite"]
             },
@@ -242,6 +255,7 @@
                 primaryUses: "External application for skin conditions",
                 alsoBeneficialFor: "Wounds, minor infections, skin inflammation",
                 bestTakenWith: "External use only, gentle massage",
+                timing: "Apply 1-2 times daily to affected areas; best after bathing when skin is clean",
                 notable: "Oil-based preparation for topical use",
                 symptoms: ["skin conditions", "wounds", "skin infections", "skin inflammation"]
             },
@@ -250,6 +264,7 @@
                 primaryUses: "Immunity booster, general health tonic",
                 alsoBeneficialFor: "Respiratory health, anti-aging",
                 bestTakenWith: "Warm milk or plain",
+                timing: "Best taken in the morning on an empty stomach; can also be taken before bed",
                 notable: "Rich in Vitamin C and antioxidants",
                 symptoms: ["low immunity", "respiratory health", "aging", "general weakness"]
             },
@@ -258,6 +273,7 @@
                 primaryUses: "Digestive disorders, constipation",
                 alsoBeneficialFor: "Bloating, gas, indigestion",
                 bestTakenWith: "Warm water after meals",
+                timing: "Take immediately after meals to aid digestion",
                 notable: "Contains eight herbs (hence 'ashta')",
                 symptoms: ["digestive disorders", "constipation", "bloating", "gas", "indigestion"]
             },
@@ -266,6 +282,7 @@
                 primaryUses: "Digestive issues, particularly gas-related problems",
                 alsoBeneficialFor: "Abdominal pain, bloating",
                 bestTakenWith: "Warm water",
+                timing: "Take when experiencing bloating or gas; may also be taken before meals preventatively",
                 notable: "Effective for vata-related disorders",
                 symptoms: ["digestive issues", "gas", "abdominal pain", "bloating"]
             },
@@ -274,6 +291,7 @@
                 primaryUses: "Pain relief, particularly neurological",
                 alsoBeneficialFor: "Arthritis, inflammation",
                 bestTakenWith: "Warm water or as directed",
+                timing: "Best taken twice daily after meals; for acute pain can be taken as needed",
                 notable: "Named after the god of Ayurveda, Dhanwantari",
                 symptoms: ["pain", "neurological pain", "arthritis", "inflammation"]
             },
@@ -282,6 +300,7 @@
                 primaryUses: "Acidity, gastric problems",
                 alsoBeneficialFor: "Heartburn, indigestion",
                 bestTakenWith: "Honey or warm water",
+                timing: "Take 30 minutes before meals for prevention or after meals for active symptoms",
                 notable: "Contains processed minerals and herbs",
                 symptoms: ["acidity", "gastric problems", "heartburn", "indigestion"]
             }
@@ -426,6 +445,9 @@
                         </div>
                         <div class="medicine-detail">
                             <span class="detail-label">Best Taken With:</span> ${medicine.bestTakenWith}
+                        </div>
+                        <div class="medicine-detail">
+                            <span class="detail-label">When to Take:</span> ${medicine.timing}
                         </div>
                         <div class="medicine-detail">
                             <span class="detail-label">Notable:</span> ${medicine.notable}
